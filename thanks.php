@@ -251,12 +251,12 @@ $icon_process 	= '<svg xmlns="http://www.w3.org/2000/svg" class="text-primary" w
 					            </div>';
 						}else{
 							echo '<div class="mb-4 text-center">
-			            		   '.$icon_failed.'
+			            		   	'.htmlentities($icon_failed, ENT_QUOTES, 'UTF-8').'
 			            		</div>
 			            		<div class="text-center">
 			            		    <h1>Failed</h1>
-			            		    <p>Your order #'.$getid[0]['order_id'].' has been cancelled.</p>
-			            		    <a href="'.home_url().'" class="btn btn-primary">Back Home</a>
+			            		    <p>Your order #'.htmlentities($getid[0]['order_id'], ENT_QUOTES, 'UTF-8').' has been cancelled.</p>
+			            		    <a href="'.htmlentities(home_url(), ENT_QUOTES, 'UTF-8').'" class="btn btn-primary">Back Home</a>
 			            		</div>';
 						}
 					break;
