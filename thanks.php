@@ -263,12 +263,12 @@ $icon_process 	= '<svg xmlns="http://www.w3.org/2000/svg" class="text-primary" w
 				
 					default:
 						echo '<div class="mb-4 text-center">
-				                '.$icon_success.'
+				                '.htmlentities($icon_success, ENT_QUOTES, 'UTF-8').'
 				            </div>
 				            <div class="text-center">
 				                <h1>Thank You !</h1>
-				                <p>Your order #'.$order_id.' has been succeed.</p>
-				                <a href="'.home_url().'" class="btn btn-primary">Back Home</a>
+		    				<p>Your order #'.htmlentities($getid[0]['order_id'], ENT_QUOTES, 'UTF-8').' has been succeed.</p>
+				                <a href="'.htmlentities(home_url(), ENT_QUOTES, 'UTF-8').'" class="btn btn-primary">Back Home</a>
 				            </div>';
 					break;
 				}
